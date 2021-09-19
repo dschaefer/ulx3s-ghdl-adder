@@ -7,14 +7,14 @@ list(APPEND CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/cmake)
 enable_testing()
 include(Dart)
 
-include (hdl)
+include (ghdl)
 
 ghdl_ecp5(vhdl_test
     SOURCES
         adder.vhdl
-        ulx3s_top.vhdl
+        adder_ulx3s.vhdl
     TOP
-        ulx3s_top
+        adder_ulx3s
     CONSTRAINTS
         ulx3s_v20.lpf
     FPGA_SIZE

@@ -2,15 +2,15 @@ library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 
-entity ulx3s_top is
+entity adder_ulx3s is
     port(
         wifi_gpio0 : out std_logic;
         led : out std_logic_vector(7 downto 0);
         btn : in std_logic_vector(6 downto 0) 
     );
-end ulx3s_top;
+end adder_ulx3s;
 
-architecture rtl of ulx3s_top is
+architecture rtl of adder_ulx3s is
     signal carry : std_logic;
 begin
     adder : entity work.adder(rtl)
